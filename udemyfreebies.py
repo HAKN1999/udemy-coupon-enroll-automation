@@ -6,11 +6,12 @@ from requests_html import HTMLSession
 import requests
 import os
 
+session = HTMLSession()
+
 
 def mengambil_url_mentah():
     """mengambil url mentahan dari website dan hasil url nya masih terbungkus"""
 
-    session = HTMLSession()
     url = "https://www.udemyfreebies.com/"
     response = session.get(url)
 
@@ -35,7 +36,6 @@ def mengambil_url_mentah():
 def membuka_pembungkus_url_mentah(url_mentah, index):
     """setelah mendapatkan url mentah,request lagi untuk membuka pembungkus url mentah"""
 
-    session = HTMLSession()
     response = session.get(url_mentah)
 
     get_link_btns = response.html.find(".button-icon")[index].links
@@ -50,7 +50,6 @@ def membuka_pembungkus_url_mentah(url_mentah, index):
 def mengambil_url_udemy(url):
     """setelah pembungkus terbuka request lagi untuk mendapatkan url udemy"""
 
-    session = HTMLSession()
     response = session.get(url)
     get_links = response.html.url
 
