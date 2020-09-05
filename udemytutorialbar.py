@@ -53,6 +53,8 @@ def simpan_kupon_udemy(url):
 
 def main():
 
+    print("[*] Memulai scraping udemy-freebies\n")
+
     memgambil_url_mentah()
 
 
