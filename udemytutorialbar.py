@@ -40,7 +40,7 @@ def url_udemy(url_mentah):
     for get_page in get_pages:
         for get_btn_offers in get_page.find(".btn_offer_block"):
             for get_btn_offer in get_btn_offers.links:
-                #                 print(get_btn_offer)
+                # print(get_btn_offer)
                 simpan_kupon_udemy(get_btn_offer)
 
 
