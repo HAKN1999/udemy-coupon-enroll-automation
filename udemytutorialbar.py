@@ -47,7 +47,7 @@ def url_udemy(url_mentah):
 def simpan_kupon_udemy(url):
     """simpan url udemy"""
 
-    with open("coupon-tutorialbar.txt", "a") as coupon:
+    with open("coupon-udemy.txt", "a") as coupon:
         coupon.write(str(url) + '\n')
 
 
