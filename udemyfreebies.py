@@ -59,20 +59,11 @@ def mengambil_url_udemy(url):
 def simpan_kupon_udemy(url, tgl=""):
     """simpan url udemy"""
 
-    with open("coupon-udemyfreebies.txt", "a") as coupon:
+    with open("coupon-udemy.txt", "a") as coupon:
         coupon.write(str(url) + '\n')
 
 
 def main():
-
-    # agar link udemy tetap fresh harus di hapus tiap kali menjalankan program
-    try:
-        os.remove("coupon-udemyfreebies.txt")
-        print("[*] File berhasil di hapus ")
-
-    except Exception as e:
-        print(e)
-        print("[*] Mungkin file sudah di hapus atau file belum terbuat\n")
 
     print("[*] Memulai scraping udemy-freebies\n")
 
