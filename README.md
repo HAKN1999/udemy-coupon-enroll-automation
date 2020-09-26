@@ -4,5 +4,5 @@
 python3
 <br/>
 <br/> pip install requests-html
-<br/>
-<br/> python udemy_enroll.py
+## Running
+python udemy_enroll.py
